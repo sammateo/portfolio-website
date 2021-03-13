@@ -17,7 +17,7 @@ export default function Home({proj}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>mateosam</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
