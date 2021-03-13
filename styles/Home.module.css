@@ -1,3 +1,5 @@
+
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -5,7 +7,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
+
 
 .main {
   padding: 5rem 0;
@@ -14,6 +19,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  position:absolute;
 }
 
 .footer {
@@ -23,6 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color:white;
 }
 
 .footer img {
@@ -50,11 +58,13 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  
 }
 
 .title,
 .description {
   text-align: center;
+  color:white;
 }
 
 .description {
@@ -113,10 +123,23 @@
 .logo {
   height: 1em;
 }
-
+.projects{
+  width:75%;
+  position: absolute;
+  bottom:-200px;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap: 10px;
+}
+.arrow{
+  position:absolute;
+  bottom:30px;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
 }
+
+

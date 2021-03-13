@@ -1,65 +1,59 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Project from '../src/project'
+import Link from 'next/Link'
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use  for styles
+// ..AOS.init();
 
-export default function Home() {
+const proj=[
+  {title:"Covid-19 Tracker", description:"Tracks covid 19 statistics"},
+  {title:"Find-A-Verse", description:"Finds Bible verses"}
+]
+
+
+export default function Home({proj}) {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Mateo <span style={{color:"#03bafc"}}>Sam</span>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Web Development Portfolio
+          {/* <code className={styles.code}>pages/index.js</code> */}
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+
+      <Link href="#projects">
+        <a> <KeyboardArrowDownIcon className={styles.arrow} style={{ color: "white", width:"50px",height:"50px"}}>Arrow</KeyboardArrowDownIcon></a>
+      </Link>
+      <div id="projects" className={styles.projects}>
+        <Link href="https://covid-19-stat-tracker.netlify.app/">
+          <a><Project title="Covid -19 Tracker" description="Tracks covid 19 stats"/></a>
+        </Link>
+
+        <Link href="https://covid-19-stat-tracker.netlify.app/">
+          <a><Project title="Covid -19 Tracker" description="Tracks covid 19 stats"/></a>
+        </Link>
+
+        
+      </div>
+
+      {/* <footer className={styles.footer}>
+
+        <p>This is my footer</p>
+      </footer> */}
+      <script src="https://unpkg.com/aos@next/dist/aos.js">
+          AOS.init();
+      </script>
     </div>
   )
 }
