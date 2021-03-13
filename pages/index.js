@@ -31,10 +31,13 @@ export default function Home({proj}) {
         </p>
       </main>
 
-
-      <Link href="#projects">
-        <a> <KeyboardArrowDownIcon className={styles.arrow} style={{ color: "white", width:"50px",height:"50px"}}>Arrow</KeyboardArrowDownIcon></a>
-      </Link>
+      <div style={{alignItems:'center',width:'75px',height:'75px'}}>
+        
+        <Link href="#projects">
+          <a> <KeyboardArrowDownIcon className={styles.arrow} style={{ color: "white", width:"50px",height:"50px"}}>Arrow</KeyboardArrowDownIcon></a>
+        </Link>
+      </div>
+      
       <div id="projects" className={styles.projects}>
         <Link href="https://covid-19-stat-tracker.netlify.app/">
           <a><Project title="Covid -19 Tracker" description="Tracks covid 19 stats"/></a>
@@ -45,6 +48,10 @@ export default function Home({proj}) {
         </Link>
 
         
+      </div>
+
+      <div className={styles.footer}>
+            <h2>Contact</h2>
       </div>
 
       {/* <footer className={styles.footer}>
