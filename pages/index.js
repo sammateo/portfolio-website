@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Project from '../src/project'
-import Link from 'next/Link'
+import Link from 'next/link'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use  for styles
