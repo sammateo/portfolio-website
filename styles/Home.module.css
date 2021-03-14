@@ -133,13 +133,19 @@
   /* border:3px solid blue; */
   display: grid;
   grid-template-columns:1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 30px;
   align-items: center;
   justify-content:center;
 }
 .arrow{
   position:absolute;
   bottom:30px;
+}
+.arrowcontainer:hover{
+  color:#0070f3;
+}
+.arrow :hover{
+  color:#0070f3;
 }
 @media (max-width: 600px) {
   .grid {

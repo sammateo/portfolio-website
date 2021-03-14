@@ -7,4 +7,13 @@
     text-align:center;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.container:hover{
+    color:black;
+    border:3px solid gainsboro;
+    background-color:white;
+    width:90%;
+    transition: 0.5s ease-in-out;
 }
