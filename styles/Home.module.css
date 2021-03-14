@@ -141,12 +141,6 @@
   position:absolute;
   bottom:30px;
 }
-.arrowcontainer:hover{
-  color:#0070f3;
-}
-.arrow :hover{
-  color:#0070f3;
-}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -155,7 +149,11 @@
 
   .projects{
     grid-template-columns:1fr;
-    bottom:-600px;
+    bottom:-500px;
+    width:90%;
+  }
+  .footer{
+    bottom:-800px;
   }
 
 }
