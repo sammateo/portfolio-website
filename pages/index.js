@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css'
 import Project from '../src/project'
 import Link from 'next/link'
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Image from 'next/image'
 import { DriveEtaOutlined } from '@material-ui/icons'
 // import SimpleCard from '../src/card.js'
 const projinfo=[
