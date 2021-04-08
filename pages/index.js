@@ -2,12 +2,14 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Project from '../src/project'
 import Link from 'next/link'
-import {useRef} from 'react'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Image from 'next/image'
+import { DriveEtaOutlined } from '@material-ui/icons'
 // import SimpleCard from '../src/card.js'
 const projinfo=[
   {title:"Covid-19 Tracker", description:"Tracks covid 19 statistics", refindex:0},
-  {title:"Find-A-Verse", description:"Finds Bible verses", refindex:1}
+  {title:"Find-A-Verse", description:"Finds Bible verses", refindex:1},
+  {title:"Cupid Delights", description:"We post Roti skins all over UK & EU.", refindex:2}
 ]
 
 export default function Home() {
@@ -17,45 +19,71 @@ export default function Home() {
         <title>mateosam</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <div className={styles.main}>
 
         <h1 className={styles.title}>
           Mateo <span style={{color:"#03bafc"}}>Sam</span>
         </h1>
 
         <p className={styles.description}>
-          Web Development Portfolio
+          Frontend Web Development Portfolio
           {/* <code className={styles.code}>pages/index.js</code> */}
         </p>
-      </main>
-
-      <div className={styles.arrowcontainer} style={{ color: "white", width:"50px",height:"50px",alignItems:'center',justifyContent:"center"}}>    
-        <Link href="#projects">
-          <a > <ExpandMoreIcon className={styles.arrow} style={{ color: "white", width:"75px",height:"75px"}}>Arrow</ExpandMoreIcon></a>
-        </Link>
       </div>
 
 
-      {/* <div style={{ color: "white", width:"50px",height:"500px",alignItems:'center',justifyContent:"center",border:"3px solid white"}}>Hello</div> */}
-      <div id="projects" className={styles.projects}>
-        {/* <Link href="https://covid-19-stat-tracker.netlify.app/"> */}
-          <Project title={projinfo[0].title} description={projinfo[0].description} refindex={projinfo[0].refindex}/>
-        {/* </Link> */}
-        
-        {/* <Link href="https://covid-19-stat-tracker.netlify.app/"> */}
-          <Project title={projinfo[1].title} description={projinfo[1].description} refindex={projinfo[1].refindex}/>
-        {/* // </Link> */}
+      {/* <Link href ="#projects">
+      <button className={styles.chevronDown}>&#x25BC;</button>
 
-        {/* <SimpleCard title = "Covid-19" description="Tracks"/> */}
-        
+      </Link> */}
+      <div id="projects" className={styles.projects}>
+      {projinfo.map((proj)=>(
+        <div key={proj.refindex}>
+          {/* <p>Hi</p> */}
+          <Project title={proj.title} description={proj.description} refindex={proj.refindex}/>
+        </div>
+      ))}
       </div>
 
         
 
       
       <div className={styles.footer}>
-            <h2>Contact</h2>
+            <h2 className={styles.contact}>Contact</h2>
+            <div className={styles.footericons}>
+              <div>
+                <Link href ="https://www.instagram.com/sammateo4/?hl=en">
+                <a>
+                  <img
+                  src="/ig.png"
+                  alt="ig"
+                  width={20}
+                  height={20}
+                  />
+                </a>
+                </Link>
 
+              </div>
+              
+              <div>
+                <Link href="https://www.linkedin.com/in/mateo-sam-464ab81b2/">
+                <a>
+                <img
+                src="/linkedin.png"
+                alt="ig"
+                width={20}
+                height={20}
+                />
+                </a>
+                </Link>
+
+              </div>
+
+              
+               
+            </div>
+            
+            
       </div>
 
       {/* <footer className={styles.footer}>
