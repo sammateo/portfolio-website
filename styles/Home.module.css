@@ -57,7 +57,7 @@
   margin-top: 0;
 }
 
-.ball,.ball2,.ball3,.ball4{
+.ball,.ball2,.ball3,.ball4,.ball5{
   background-color:white;
   width:20px;
   height:20px;
@@ -67,7 +67,7 @@
   animation-name: ballanimation;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  
+  opacity: 0;
 }
 
 .ball2{
@@ -75,38 +75,49 @@
 }
 
 .ball3{
-  animation-delay:1.5s;
+  animation-delay:2s;
 }
 
 .ball4{
-  animation-delay:2s;
+  animation-delay:3s;
+}
+
+.ball5{
+  animation-delay:4s;
 }
 
 @keyframes ballanimation{
   0%{
     transform: translateX(-400px);
     background-color:aqua;
+    opacity:1;
   }
 
   25%{
     /* transform: translateX(200px); */
     transform: translateY(700px);
     background-color:yellow;
+    opacity:1;
   }
   50%{
     transform: translateX(400px);
     background-color:red;
+    opacity:1;
   }
-  
+  /* 65%{
+    transform:translateY(200px)
+  } */
   75%{
     transform: translateY(-200px);
     background-color:#03bafc;
+    opacity:1;
   }
 
 
 
   100%{
     transform: translateX(-400px);
+    opacity:1;
   }
 }
 
@@ -115,6 +126,34 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.projectball{
+  background-color:white;
+  width:20px;
+  height:20px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 20px;
+  animation-name: projectballanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+/* @keyframes projectballanimation{
+  0%{
+      transform: translateX(-3000%)
+  }
+
+  50%{
+    transform: translateX(3000%)
+  }
+
+  100%{
+    transform: translateX(-3000%)
+}
+} */
+
 
 .footer{
   color:black;

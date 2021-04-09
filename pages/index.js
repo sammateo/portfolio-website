@@ -35,6 +35,7 @@ export default function Home() {
         <Link href ="#contact">
             <p>Contact</p>
          </Link>
+         
       </div>
 
       <div className={styles.main}>
@@ -42,6 +43,7 @@ export default function Home() {
         <div className={styles.ball2}></div>
         <div className={styles.ball3}></div>
         <div className={styles.ball4}></div>
+        <div className={styles.ball5}></div>
         <h1 className={styles.title} >
           Mateo <span style={{color:"#03bafc"}}>Sam</span>
         </h1>
@@ -60,8 +62,11 @@ export default function Home() {
       <div id="projects" className={styles.projects}>
       {projinfo.map((proj)=>(
         <div key={proj.refindex}>
+        
+
           {/* <p>Hi</p> */}
           <Project title={proj.title} description={proj.description} refindex={proj.refindex}/>
+          {/* <div className={styles.projectball}></div> */}
         </div>
       ))}
       </div>
@@ -70,6 +75,7 @@ export default function Home() {
 
       
       <div className={styles.footer} id="contact" data-aos="flip-up">
+        
             <h2 className={styles.contact}>Contact</h2>
             <div className={styles.footericons}>
               <div>
