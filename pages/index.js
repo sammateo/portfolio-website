@@ -2,8 +2,11 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Project from '../src/project'
 import Link from 'next/link'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { DriveEtaOutlined } from '@material-ui/icons'
+import { useEffect } from 'react'
 // import SimpleCard from '../src/card.js'
 const projinfo=[
   {title:"Covid-19 Tracker", description:"Tracks covid 19 statistics", refindex:0},
@@ -12,6 +15,13 @@ const projinfo=[
 ]
 
 export default function Home() {
+
+
+
+  useEffect(() =>{
+    Aos.init({duration: 2000})
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +30,7 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
 
-        <h1 className={styles.title}>
+        <h1 className={styles.title} >
           Mateo <span style={{color:"#03bafc"}}>Sam</span>
         </h1>
 
@@ -37,7 +47,7 @@ export default function Home() {
       </Link> */}
       <div id="projects" className={styles.projects}>
       {projinfo.map((proj)=>(
-        <div key={proj.refindex}>
+        <div key={proj.refindex} data-aos="flip-left">
           {/* <p>Hi</p> */}
           <Project title={proj.title} description={proj.description} refindex={proj.refindex}/>
         </div>
@@ -47,7 +57,7 @@ export default function Home() {
         
 
       
-      <div className={styles.footer}>
+      <div className={styles.footer} data-aos="flip-up">
             <h2 className={styles.contact}>Contact</h2>
             <div className={styles.footericons}>
               <div>
@@ -89,9 +99,9 @@ export default function Home() {
 
         <p>This is my footer</p>
       </footer> */}
-      <script src="https://unpkg.com/aos@next/dist/aos.js">
+      {/* <script src="https://unpkg.com/aos@next/dist/aos.js">
           AOS.init();
-      </script>
+      </script> */}
     </div>
   )
 }
