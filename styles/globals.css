@@ -6,6 +6,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color:black;
+    /* background-image: url('/black2.jpg');
+    background-position:center;
+    background-size: cover; */
     color:white;
 }
 

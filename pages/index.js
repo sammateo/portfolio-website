@@ -49,7 +49,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Frontend Web Development Portfolio
+          Front End Web Development Portfolio
           {/* <code className={styles.code}>pages/index.js</code> */}
         </p>
       </div>
