@@ -1,11 +1,37 @@
 .container{
   display:grid;
-  grid-template-rows: 700px auto 200px;
+  grid-template-rows: 100px 600px auto 200px;
   width:100%;
   margin:auto;
   /* border:2px solid white; */
   grid-gap:50px;
   overflow:hidden;
+}
+
+.navbar{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  text-align:center;
+  /* border:2px solid white; */
+  place-items: center;
+}
+
+.navbar p{
+  /* border:2px solid white; */
+  display:grid;
+  width:30%;
+  place-items: center;
+  transition: 0.5s ease-in-out;
+  height:40%;
+}
+
+.navbar p:hover{
+  color:black;
+  background-color:white;
+  width:50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
 }
 
 .main{
@@ -31,6 +57,59 @@
   margin-top: 0;
 }
 
+.ball,.ball2,.ball3,.ball4{
+  background-color:white;
+  width:20px;
+  height:20px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 20px;
+  animation-name: ballanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  
+}
+
+.ball2{
+  animation-delay: 1s;
+}
+
+.ball3{
+  animation-delay:1.5s;
+}
+
+.ball4{
+  animation-delay:2s;
+}
+
+@keyframes ballanimation{
+  0%{
+    transform: translateX(-400px);
+    background-color:aqua;
+  }
+
+  25%{
+    /* transform: translateX(200px); */
+    transform: translateY(700px);
+    background-color:yellow;
+  }
+  50%{
+    transform: translateX(400px);
+    background-color:red;
+  }
+  
+  75%{
+    transform: translateY(-200px);
+    background-color:#03bafc;
+  }
+
+
+
+  100%{
+    transform: translateX(-400px);
+  }
+}
+
 .projects{
   width:80%;
   margin-left: auto;
@@ -51,7 +130,8 @@
 
 .footericons{
   display:grid;
-  grid-template-columns: 40px 40px;
+  grid-template-columns: 40px 40px 40px;
+  place-items: center;
 }
 
 

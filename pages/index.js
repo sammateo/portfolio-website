@@ -28,8 +28,20 @@ export default function Home() {
         <title>mateosam</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main}>
+      <div className={styles.navbar}>
+        <Link href ="#projects">
+            <p>Projects</p>
+        </Link>
+        <Link href ="#contact">
+            <p>Contact</p>
+         </Link>
+      </div>
 
+      <div className={styles.main}>
+        <div className={styles.ball}></div>
+        <div className={styles.ball2}></div>
+        <div className={styles.ball3}></div>
+        <div className={styles.ball4}></div>
         <h1 className={styles.title} >
           Mateo <span style={{color:"#03bafc"}}>Sam</span>
         </h1>
@@ -47,7 +59,7 @@ export default function Home() {
       </Link> */}
       <div id="projects" className={styles.projects}>
       {projinfo.map((proj)=>(
-        <div key={proj.refindex} data-aos="flip-left">
+        <div key={proj.refindex}>
           {/* <p>Hi</p> */}
           <Project title={proj.title} description={proj.description} refindex={proj.refindex}/>
         </div>
@@ -57,12 +69,12 @@ export default function Home() {
         
 
       
-      <div className={styles.footer} data-aos="flip-up">
+      <div className={styles.footer} id="contact" data-aos="flip-up">
             <h2 className={styles.contact}>Contact</h2>
             <div className={styles.footericons}>
               <div>
                 <Link href ="https://www.instagram.com/sammateo4/?hl=en">
-                <a>
+                <a target ="_blank">
                   <img
                   src="/ig.png"
                   alt="ig"
@@ -76,10 +88,25 @@ export default function Home() {
               
               <div>
                 <Link href="https://www.linkedin.com/in/mateo-sam-464ab81b2/">
-                <a>
+                <a target ="_blank">
                 <img
                 src="/linkedin.png"
-                alt="ig"
+                alt="linkedin"
+                width={20}
+                height={20}
+                />
+                </a>
+                </Link>
+
+              </div>
+              
+              
+              <div>
+                <Link href="https://github.com/sammateo">
+                <a target ="_blank">
+                <img
+                src="/github.png"
+                alt="github"
                 width={20}
                 height={20}
                 />
