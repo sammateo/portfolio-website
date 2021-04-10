@@ -2,8 +2,8 @@
     display: block;
     width:80%;
     padding:20px;
-    color:white;
-    border:3px solid white;
+    color:var(--color);
+    border:3px solid var(--color);
     text-align:center;
     margin-left: auto;
     margin-right: auto;
@@ -13,10 +13,10 @@
 }
 
 .container:hover{
-    color:black;
+    color:var(--background);
     border:3px solid gainsboro;
-    background-color:white;
+    background-color:var(--color);
     width:100%;
-
+    cursor: pointer;
     transition: 0.5s ease-in-out;
 }

@@ -6,7 +6,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { DriveEtaOutlined } from '@material-ui/icons'
-import { useEffect } from 'react'
+import { useState,useEffect} from 'react'
 // import SimpleCard from '../src/card.js'
 const projinfo=[
   {title:"Covid-19 Tracker", description:"Tracks covid 19 statistics", refindex:0},
@@ -15,8 +15,31 @@ const projinfo=[
 ]
 
 export default function Home() {
-
-
+  const [theme,setTheme] = useState('Dark Theme')
+  // console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--background'));
+  // console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--color'));
+  function changeTheme(){
+    console.log(document.getElementById('ig').src)
+    if(window.getComputedStyle(document.documentElement).getPropertyValue('--color') == 'white')
+    {
+      document.getElementById('ig').src = '/ig2.png'
+      document.getElementById('linkedin').src = '/linkedin2.png'
+      document.getElementById('github').src = '/github2.png'
+      document.documentElement.style.setProperty('--background','white')
+      document.documentElement.style.setProperty('--color','black')
+      setTheme('Light Theme')
+    }
+    else{
+      setTheme('Dark Theme')
+      document.getElementById('ig').src = '/ig.png'
+      document.getElementById('linkedin').src = '/linkedin.png'
+      document.getElementById('github').src = '/github.png'
+      document.documentElement.style.setProperty('--background','black')
+    document.documentElement.style.setProperty('--color','white')
+    }
+    
+  }
+  
 
   useEffect(() =>{
     Aos.init({duration: 2000})
@@ -28,7 +51,8 @@ export default function Home() {
         <title>mateosam</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.navbar}>
+
+      <div className={styles.navbar} id="navbar">
         <Link href ="#projects">
             <p>Projects</p>
         </Link>
@@ -52,6 +76,7 @@ export default function Home() {
           Front End Web Development Portfolio
           {/* <code className={styles.code}>pages/index.js</code> */}
         </p>
+        <button className={styles.themeButton} onClick={changeTheme}>{theme}</button>
       </div>
 
 
@@ -74,14 +99,14 @@ export default function Home() {
         
 
       
-      <div className={styles.footer} id="contact" data-aos="flip-up">
+      <div className={styles.footer}  data-aos="flip-up">
         
             <h2 className={styles.contact}>Contact</h2>
-            <div className={styles.footericons}>
+            <div className={styles.footericons} id="contact">
               <div>
                 <Link href ="https://www.instagram.com/sammateo4/?hl=en">
                 <a target ="_blank">
-                  <img
+                  <img id="ig"
                   src="/ig.png"
                   alt="ig"
                   width={20}
@@ -95,7 +120,7 @@ export default function Home() {
               <div>
                 <Link href="https://www.linkedin.com/in/mateo-sam-464ab81b2/">
                 <a target ="_blank">
-                <img
+                <img id="linkedin"
                 src="/linkedin.png"
                 alt="linkedin"
                 width={20}
@@ -110,7 +135,7 @@ export default function Home() {
               <div>
                 <Link href="https://github.com/sammateo">
                 <a target ="_blank">
-                <img
+                <img id = "github"
                 src="/github.png"
                 alt="github"
                 width={20}

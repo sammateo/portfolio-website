@@ -24,13 +24,13 @@ export default function project({title,description,refindex}){
     //   }
     return(
         <div data-aos={animations[refindex]}>
-        <Link   href={projinfo[refindex].ref}>
-            <a target="_blank"><div className={style.container}>
+        <Link   href={projinfo[refindex].ref} >
+            <div className={style.container}>
             
                 <h3>{title}</h3>
                 <p>{description}</p>
                 {/* <button onClick={removeElement}>Click</button> */}
-            </div></a>
+            </div>
         </Link>
         </div>
         
