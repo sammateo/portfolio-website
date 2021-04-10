@@ -16,12 +16,14 @@ const projinfo=[
 
 export default function Home() {
   const [theme,setTheme] = useState('Dark Theme')
+  const [themeHandle, setThemeHandle] = useState(0)
   // console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--background'));
   // console.log(window.getComputedStyle(document.documentElement).getPropertyValue('--color'));
   function changeTheme(){
     console.log(document.getElementById('ig').src)
-    if(window.getComputedStyle(document.documentElement).getPropertyValue('--color') == 'white')
+    if(window.getComputedStyle(document.documentElement).getPropertyValue('--color') == 'white' || themeHandle == 0)
     {
+      setThemeHandle(1)
       document.getElementById('ig').src = '/ig2.png'
       document.getElementById('linkedin').src = '/linkedin2.png'
       document.getElementById('github').src = '/github2.png'
