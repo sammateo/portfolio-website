@@ -1,6 +1,8 @@
-:root{
-  --background:black;
-  --color:white;
+:root {
+  --background: black;
+  --color: white;
+  --primary: white;
+  --secondary: #03bafc;
 }
 
 html,
@@ -9,11 +11,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color:var(--background);
-    /* background-image: url('/black2.jpg');
-    background-position:center;
-    background-size: cover; */
-    color:var(--color);
+  background-color: var(--background);
+  color: var(--color);
 }
 
 a {
@@ -25,4 +24,3 @@ a {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-

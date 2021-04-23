@@ -1,0 +1,117 @@
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: grid;
+  place-content: center;
+}
+.main .title,
+.main .description {
+  transform: translateY(-100px);
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 100px;
+  margin-bottom: 0;
+}
+
+.firstname {
+  color: var(--primary);
+}
+
+.lastname {
+  color: var(--secondary);
+}
+
+.main .description {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.themeButton {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-200%);
+  background-color: var(--background);
+  color: var(--color);
+  border: none;
+  outline: 0;
+  border-radius: 0;
+  border: 2px solid var(--color);
+  padding: 10px;
+}
+
+.themeButton:hover {
+  cursor: pointer;
+}
+
+.ball,
+.ball2,
+.ball3,
+.ball4,
+.ball5 {
+  background-color: var(--color);
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  animation-name: ballanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.ball2 {
+  animation-delay: 1s;
+}
+
+.ball3 {
+  animation-delay: 2s;
+}
+
+.ball4 {
+  animation-delay: 3s;
+}
+
+.ball5 {
+  animation-delay: 4s;
+}
+
+@keyframes ballanimation {
+  0% {
+    transform: translateX(-400px);
+    background-color: aqua;
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(600px);
+    background-color: yellow;
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(400px);
+    background-color: red;
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-200px);
+    background-color: #03bafc;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-400px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .main .title {
+    font-size: 45px;
+  }
+}

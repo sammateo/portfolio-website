@@ -1,0 +1,23 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  place-items: center;
+}
+
+.navbar p {
+  display: grid;
+  text-align: center;
+  width: 30%;
+  place-items: center;
+  transition: 0.5s ease-in-out;
+  height: 40%;
+}
+
+.navbar p:hover {
+  color: var(--background);
+  background-color: var(--color);
+  width: 85%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
