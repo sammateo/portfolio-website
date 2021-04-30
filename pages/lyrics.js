@@ -1,14 +1,18 @@
-import styles from "../styles/Landing.module.css";
-import Aos from "aos";
-import { useEffect, useState } from "react";
-import "aos/dist/aos.css";
-export default function Landing() {
-	useEffect(() => {
-		Aos.init({ duration: 2000 });
-		checkTheme();
-	});
+import Head from "next/head";
+import styles from "../styles/Lyrics/Lyrics.module.css";
+import Footer from "../src/Footer";
+import { useState, useEffect } from "react";
+export default function Home() {
+	const [lyric, setLyric] = useState();
+	const [artist, setArtist] = useState();
+	const [song, setSong] = useState();
+
 	const [theme, setTheme] = useState("Dark Theme");
 	const [themeHandle, setThemeHandle] = useState(0);
+
+	useEffect(() => {
+		checkTheme();
+	});
 	function checkTheme() {
 		if (
 			window
@@ -17,7 +21,7 @@ export default function Landing() {
 		) {
 			setThemeHandle(1);
 			document.getElementById("ig").src = "/ig2.png";
-			// document.getElementById("themeicon").style.transform = "rotate(180deg)";
+			document.getElementById("themeicon").style.transform = "rotate(180deg)";
 			document.getElementById("linkedin").src = "/linkedin2.png";
 			document.getElementById("github").src = "/github2.png";
 			document.documentElement.style.setProperty("--background", "white");
@@ -28,7 +32,7 @@ export default function Landing() {
 		} else {
 			setTheme("Dark Theme");
 			document.getElementById("ig").src = "/ig.png";
-			// document.getElementById("themeicon").style.transform = "rotate(0deg)";
+			document.getElementById("themeicon").style.transform = "rotate(0deg)";
 			document.getElementById("linkedin").src = "/linkedin.png";
 			document.getElementById("github").src = "/github.png";
 			document.documentElement.style.setProperty("--background", "black");
@@ -47,6 +51,7 @@ export default function Landing() {
 		) {
 			setThemeHandle(1);
 			document.getElementById("ig").src = "/ig2.png";
+			document.getElementById("themeicon").style.transform = "rotate(180deg)";
 			document.getElementById("linkedin").src = "/linkedin2.png";
 			document.getElementById("github").src = "/github2.png";
 			document.documentElement.style.setProperty("--background", "white");
@@ -58,6 +63,7 @@ export default function Landing() {
 		} else {
 			setTheme("Dark Theme");
 			document.getElementById("ig").src = "/ig.png";
+			document.getElementById("themeicon").style.transform = "rotate(0deg)";
 			document.getElementById("linkedin").src = "/linkedin.png";
 			document.getElementById("github").src = "/github.png";
 			document.documentElement.style.setProperty("--background", "black");
@@ -66,28 +72,57 @@ export default function Landing() {
 			document.documentElement.style.setProperty("--secondary", "#03bafc");
 		}
 	}
-
+	async function getLyrics() {
+		let song = document.getElementById("songin").value;
+		let artiste = document.getElementById("artistin").value;
+		const request = await fetch(
+			"https://api.lyrics.ovh/v1/" + artiste + "/" + song
+		);
+		const data = await request.json();
+		// console.log(data.lyrics);
+		setLyric(data.lyrics);
+		setArtist(artiste);
+		setSong(song);
+	}
 	return (
-		<div className={styles.main}>
-			<div className={styles.ball}></div>
-			<div className={styles.ball2}></div>
-			<div className={styles.ball3}></div>
-			<div className={styles.ball4}></div>
-			<div className={styles.ball5}></div>
-			<h1 className={styles.title}>
-				<span className={styles.firstname}>Mateo</span>{" "}
-				<span className={styles.lastname}>Sam</span>
-			</h1>
-			<p className={styles.description}>Front End Web Development Portfolio</p>
-			<button className={styles.themeButton} onClick={changeTheme}>
-				{theme}
-			</button>
-			{/* <img
-				id="themeicon"
-				src="/sun.png"
-				onClick={changeTheme}
-				className={styles.theme}
-			></img> */}
+		<div className={styles.container}>
+			<Head>
+				<title>mateosam</title>
+				<link rel="icon" href="/favicon.ico" />
+				<meta name="description" content="Web development portfolio" />
+			</Head>
+			<div className={styles.header}>
+				<img
+					id="themeicon"
+					src="/sun.png"
+					onClick={changeTheme}
+					className={styles.theme}
+				></img>
+				<h1>Lyric Finder</h1>
+				<label htmlFor="artist">Artist Name</label>
+				<input className={styles.input} name="artist" id="artistin"></input>
+				<label htmlFor="song">Song Name</label>
+
+				<input className={styles.input} name="song" id="songin"></input>
+				<button className={styles.button} onClick={getLyrics}>
+					Search Song
+				</button>
+			</div>
+			<div>
+				<div className={styles.lyriccontainer}>
+					{lyric == null ? (
+						<p>Lyrics Go Here</p>
+					) : (
+						<p>
+							{artist} ~ {song}
+						</p>
+					)}
+
+					<pre>{lyric}</pre>
+				</div>
+			</div>
+
+			<Footer></Footer>
 		</div>
 	);
 }

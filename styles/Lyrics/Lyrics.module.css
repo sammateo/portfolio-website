@@ -1,0 +1,94 @@
+.container {
+	display: grid;
+	grid-template-rows: 400px auto 200px;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+.header {
+	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	place-items: center;
+}
+.input {
+	border: none;
+	outline: none;
+	width: 300px;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 20px;
+	background-color: var(--color);
+	color: var(--background);
+	border: 2px solid var(--background);
+	transition: 0.5s ease-in-out;
+}
+.input:hover {
+	background-color: var(--background);
+	color: var(--color);
+	border: 2px solid var(--color);
+}
+
+.button {
+	background-color: var(--background);
+	color: var(--color);
+	border: none;
+	outline: none;
+	padding: 5px;
+	width: 100px;
+	border: 2px solid var(--color);
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.button:active {
+	background-color: var(--color);
+	color: var(--background);
+	border: 2px solid var(--background);
+}
+
+.theme {
+	transition: 0.5s ease-in-out;
+	border-radius: 20px;
+	background-color: white;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+}
+
+.theme:hover {
+	cursor: pointer;
+}
+
+.lyriccontainer {
+	background-color: var(--background);
+	color: var(--color);
+	display: block;
+	min-width: fit-content;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px 5px var(--background);
+}
+
+.lyriccontainer p {
+	font-size: 2em;
+}
+
+.lyriccontainer pre {
+	white-space: pre-line;
+}
+
+@media screen and (max-width: 400px) {
+	.theme {
+		right: 10px;
+	}
+}
