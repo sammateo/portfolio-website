@@ -7,7 +7,7 @@ export default function Landing() {
 		Aos.init({ duration: 2000 });
 		checkTheme();
 	});
-	const [theme, setTheme] = useState("Dark Theme");
+	const [theme, setTheme] = useState("Light Theme");
 	const [themeHandle, setThemeHandle] = useState(0);
 	function checkTheme() {
 		if (
@@ -24,9 +24,9 @@ export default function Landing() {
 			document.documentElement.style.setProperty("--color", "black");
 			document.documentElement.style.setProperty("--primary", "#03bafc");
 			document.documentElement.style.setProperty("--secondary", "black");
-			setTheme("Light Theme");
-		} else {
 			setTheme("Dark Theme");
+		} else {
+			setTheme("Light Theme");
 			document.getElementById("ig").src = "/ig.png";
 			// document.getElementById("themeicon").style.transform = "rotate(0deg)";
 			document.getElementById("linkedin").src = "/linkedin.png";
@@ -54,9 +54,9 @@ export default function Landing() {
 			document.documentElement.style.setProperty("--primary", "#03bafc");
 			document.documentElement.style.setProperty("--secondary", "black");
 
-			setTheme("Light Theme");
-		} else {
 			setTheme("Dark Theme");
+		} else {
+			setTheme("Light Theme");
 			document.getElementById("ig").src = "/ig.png";
 			document.getElementById("linkedin").src = "/linkedin.png";
 			document.getElementById("github").src = "/github.png";

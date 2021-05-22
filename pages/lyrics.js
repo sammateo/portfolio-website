@@ -100,10 +100,22 @@ export default function Home() {
 				></img>
 				<h1>Lyric Finder</h1>
 				<label htmlFor="artist">Artist Name</label>
-				<input className={styles.input} name="artist" id="artistin"></input>
-				<label htmlFor="song">Song Name</label>
+				<input
+					type="text"
+					className={styles.input}
+					name="artist"
+					placeholder="Artist"
+					id="artistin"
+				></input>
 
-				<input className={styles.input} name="song" id="songin"></input>
+				<label htmlFor="song">Song Name</label>
+				<input
+					type="text"
+					className={styles.input}
+					name="song"
+					placeholder="Song"
+					id="songin"
+				></input>
 				<button className={styles.button} onClick={getLyrics}>
 					Search Song
 				</button>

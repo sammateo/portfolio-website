@@ -24,13 +24,13 @@ const projinfo = [
 		ref: "https://cupid-delights.netlify.app/",
 		animation: "flip-right",
 	},
-	{
-		title: "Lyric Finder",
-		description: "Find song lyrics",
-		refindex: 3,
-		ref: "/lyrics",
-		animation: "flip-up",
-	},
+	// {
+	// 	title: "Lyric Finder",
+	// 	description: "Find song lyrics",
+	// 	refindex: 3,
+	// 	ref: "/lyrics",
+	// 	animation: "flip-up",
+	// },
 ];
 
 export default function Projects() {

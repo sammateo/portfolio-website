@@ -1,23 +1,31 @@
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-  place-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	place-items: center;
+	/**/
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 10;
+	border-bottom: 2px solid var(--color);
+	background-color: var(--background);
+	/**/
 }
 
 .navbar p {
-  display: grid;
-  text-align: center;
-  width: 30%;
-  place-items: center;
-  transition: 0.5s ease-in-out;
-  height: 40%;
+	display: grid;
+	text-align: center;
+	width: 30%;
+	place-items: center;
+	transition: 0.5s ease-in-out;
+	height: 40%;
 }
 
 .navbar p:hover {
-  color: var(--background);
-  background-color: var(--color);
-  width: 85%;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
+	color: var(--background);
+	background-color: var(--color);
+	width: 85%;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
 }

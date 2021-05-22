@@ -4,6 +4,7 @@
 	width: 90%;
 	display: grid;
 	place-content: center;
+	margin-top: 100px; /*added for fixed nav*/
 }
 .main .title,
 .main .description {
@@ -42,10 +43,27 @@
 	border-radius: 0;
 	border: 2px solid var(--color);
 	padding: 10px;
+	transition: 0.3s ease-in-out;
 }
 
 .themeButton:hover {
 	cursor: pointer;
+	/* animation: button 300ms forwards; */
+	transform-origin: center;
+	/* transform: 1s ease-in-out; */
+	background-color: var(--color);
+	color: var(--background);
+	border: 2px solid var(--background);
+}
+
+@keyframes button {
+	0% {
+		transform: scale();
+	}
+	100% {
+		transform: scale(1.2) translateY(-65px);
+		box-shadow: 5px 5px 5px;
+	}
 }
 zz .ball,
 .ball2,
