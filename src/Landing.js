@@ -82,6 +82,12 @@ export default function Landing() {
 			<button className={styles.themeButton} onClick={changeTheme}>
 				{theme}
 			</button>
+
+			<a className={styles.projectslink} href="#projectsbutton">
+				<button id="projectsbutton" className={styles.projectsbutton}>
+					^
+				</button>
+			</a>
 			{/* <img
 				id="themeicon"
 				src="/sun.png"

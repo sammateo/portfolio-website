@@ -127,6 +127,20 @@ zz .ball,
 	}
 }
 
+.projectsbutton {
+	background-color: var(--background);
+	border: none;
+	outline: none;
+	color: var(--color);
+	transform: rotate(180deg);
+	font-size: 2em;
+	/* padding: 0; */
+	/* border: 3px solid var(--color); */
+}
+.projectslink {
+	display: block;
+	margin: auto;
+}
 @media screen and (max-width: 300px) {
 	.main .title {
 		font-size: 45px;
