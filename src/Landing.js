@@ -69,11 +69,11 @@ export default function Landing() {
 
 	return (
 		<div className={styles.main}>
-			<div className={styles.ball}></div>
+			{/* <div className={styles.ball}></div>
 			<div className={styles.ball2}></div>
 			<div className={styles.ball3}></div>
 			<div className={styles.ball4}></div>
-			<div className={styles.ball5}></div>
+			<div className={styles.ball5}></div> */}
 			<h1 className={styles.title}>
 				<span className={styles.firstname}>Mateo</span>{" "}
 				<span className={styles.lastname}>Sam</span>
