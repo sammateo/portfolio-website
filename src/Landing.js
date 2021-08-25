@@ -83,8 +83,8 @@ export default function Landing() {
 				{theme}
 			</button>
 
-			<a className={styles.projectslink} href="#projectsbutton">
-				<button id="projectsbutton" className={styles.projectsbutton}>
+			<a className={styles.projectslink} href="#projects">
+				<button id="projects" className={styles.projectsbutton}>
 					^
 				</button>
 			</a>

@@ -35,7 +35,7 @@ const projinfo = [
 
 export default function Projects() {
 	return (
-		<div id="projects" className={styles.projects}>
+		<div className={styles.projects}>
 			{projinfo.map((proj) => (
 				<div key={proj.refindex}>
 					<Project
