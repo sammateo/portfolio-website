@@ -4,7 +4,7 @@
 	width: 90%;
 	display: grid;
 	place-content: center;
-	margin-top: 100px; /*added for fixed nav*/
+	margin-top: 200px; /*added for fixed nav*/
 }
 .main .title,
 .main .description {
@@ -134,8 +134,12 @@ zz .ball,
 	color: var(--color);
 	transform: rotate(180deg);
 	font-size: 2em;
-	/* padding: 0; */
+	padding: 0;
 	/* border: 3px solid var(--color); */
+}
+
+.projectsbutton:hover {
+	cursor: pointer;
 }
 .projectslink {
 	display: block;
