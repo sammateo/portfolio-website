@@ -17,11 +17,15 @@ export default function project() {
 
 			<ul>
 				<p>Languages and Frameworks:</p>
+				<li>HTML</li>
+				<li>CSS</li>
 				<li>Javascript</li>
 				<li>ReactJS</li>
 				<li>NextJS</li>
-				<li>C++</li>
 				<li>C</li>
+				<li>C++</li>
+				<li>PHP</li>
+				<li>MySQL</li>
 			</ul>
 		</div>
 	);
