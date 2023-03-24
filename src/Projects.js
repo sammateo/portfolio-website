@@ -3,6 +3,13 @@ import Project from "../src/project";
 
 const projinfo = [
 	{
+		title: "ClearView Lens",
+		description: "ClearView Multifocal IOL by Lenstec, Inc.",
+		refindex: 3,
+		ref: "https://clearview-dev-80941.web.app/",
+		animation: "fade-up",
+	},
+	{
 		title: "Covid-19 Tracker",
 		description: "Tracks COVID-19 Statistics",
 		refindex: 0,
@@ -24,6 +31,7 @@ const projinfo = [
 		ref: "https://cupid-delights.netlify.app/",
 		animation: "flip-right",
 	},
+
 	// {
 	// 	title: "Lyric Finder",
 	// 	description: "Find song lyrics",
